@@ -9,3 +9,4 @@ The goal of the game is to get the maximum number of points. The score is arrang
 
 ![balls](https://user-images.githubusercontent.com/61186198/109145541-a817ab80-7773-11eb-9c70-cbd3e929f73a.gif)
 
+![balls2](https://user-images.githubusercontent.com/61186198/109145726-ed3bdd80-7773-11eb-89d2-205842decbfe.gif)
