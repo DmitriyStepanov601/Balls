@@ -16,7 +16,7 @@ public abstract class AbstractCell extends JLabel implements Clickable {
 
     private static final Map<Pair<Integer, Integer>, Cell> cellMap = new HashMap<>();
     private static final List<Cell> emptyCells = new ArrayList<>();
-    static Cell previousCell;
+    public static Cell previousCell;
     private State state;
 
     public AbstractCell() {

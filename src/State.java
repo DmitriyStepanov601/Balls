@@ -3,5 +3,7 @@
  * @author Dmitriy Stepanov
  */
 public enum State {
-    SELECTED, RELEASED, EMPTY
+    SELECTED,
+    RELEASED,
+    EMPTY
 }

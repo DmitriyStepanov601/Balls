@@ -42,7 +42,7 @@ public class ResourceLoader {
         return new ImageIcon(Game.class.getResource("/balls/" + color + "-ball.png"));
     }
 
-    public static BufferedImage loadImage(String path){
+    public static BufferedImage loadImage(String path) {
         try {
             return ImageIO.read(ResourceLoader.class.getResource(path));
         } catch (IOException e) {

@@ -26,7 +26,7 @@ public class Helper {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            Graphics.getInfoLabel().setText("Start a new game.");
+            Graphics.getInfoLabel().setText("Start a new game");
             generateRandomImages(Graphics.getInfoLabel().getText(),false, 5);
 
         }).start();
@@ -34,8 +34,7 @@ public class Helper {
 
     public static void generateRandomImages(String textInfo, boolean lineWasDeleted, int amount) {
         if (!lineWasDeleted) {
-            Graphics.getInfoLabel().setText( textInfo );
-
+            Graphics.getInfoLabel().setText(textInfo);
             for (int i = 0; i < amount; i++) {
                 Cell cell = getRandomCell( AbstractCell.getEmptyCells());
                 int index = (int) (Math.random() * ResourceLoader.BALLS.length);
@@ -47,18 +46,18 @@ public class Helper {
     }
 
     private static Cell getRandomCell(List<Cell> freeCells) {
-        int index = (int) (Math.random() * freeCells.size());
+        int index = (int)(Math.random() * freeCells.size());
         return freeCells.get(index);
     }
 
-    static void accrualPoints(int lineSize) {
-        double ratio = 2.1 + (double) (lineSize - 5) / 10;
-        int pointsValue = Logic.getPointsCounter() + (int) (lineSize * ratio);
+    public static void accrualPoints(int lineSize) {
+        double ratio = 2.1 + (double)(lineSize - 5) / 10;
+        int pointsValue = Logic.getPointsCounter() + (int)(lineSize * ratio);
         Logic.setPointsCounter(pointsValue);
         Graphics.getPointsLabel().setText("Points: " + Logic.getPointsCounter());
     }
 
-    static void checkGameEndingCondition() {
+    public static void checkGameEndingCondition() {
         if (AbstractCell.getEmptyCells().size() <= 3) {
             GameOver.init();
             Graphics.getInfoLabel().setText("Game over!");
