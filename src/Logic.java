@@ -17,7 +17,7 @@ public class Logic {
     private final Queue<Cell> queue;
     private boolean lineState;
 
-    static void setPointsCounter(int pointsCounter) {
+    public static void setPointsCounter(int pointsCounter) {
         Logic.pointsCounter = pointsCounter;
     }
     public static int getPointsCounter() {
@@ -95,7 +95,8 @@ public class Logic {
             Map<String, List<Cell>>  colorSequenceMap = new HashMap<>();
 
             for (int y = 1; y <= sideLength; y++) {
-                Cell nextCell = isVertical ? AbstractCell.getCellMap().get(new Pair<>(x, y)) : AbstractCell.getCellMap().get(new Pair<>(y, x));
+                Cell nextCell = isVertical ? AbstractCell.getCellMap().get(new Pair<>(x, y)) :
+                        AbstractCell.getCellMap().get(new Pair<>(y, x));
                 String color = nextCell.containsImage() ? nextCell.getImageColor() : "";
                 List<Cell> images = color.isEmpty() ? null : colorSequenceMap.get(color);
                 images = Objects.isNull(images) ? new ArrayList<>() : colorSequenceMap.get(color);
